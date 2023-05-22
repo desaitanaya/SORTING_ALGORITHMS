@@ -8,7 +8,7 @@
             while (choice != 3)
             {
                 Console.WriteLine("**********MENU**********");
-                Console.WriteLine("1.Binary Search \n2.Insertion Sort \n3.Bubble Sort \n4.Exit");
+                Console.WriteLine("1.Binary Search \n2.Insertion Sort \n3.Bubble Sort \n4.Merge Sort \n5.Exit");
                 Console.WriteLine("-----------------------------------");
                 Console.WriteLine("Enter choice :");
                 choice = int.Parse(Console.ReadLine());
@@ -75,6 +75,28 @@
                         else
                         {
                             BubbleSort<string> strArray = new BubbleSort<string>();
+                            strArray.UserInputStringArray<string>();
+                        }
+
+                        break;
+
+                    case 4:
+                        Console.WriteLine("MERGE SORT");
+                        Console.WriteLine();
+                        Console.WriteLine("1.Merge Sort on Integer values \n2.Merge Sort on String values");
+                        Console.WriteLine("-----------------------------------");
+                        Console.WriteLine("Enter choice :");
+                        int mergeSort = int.Parse(Console.ReadLine());
+                        Console.WriteLine("-----------------------------------");
+
+                        if (mergeSort == 1)
+                        {
+                            MergeSort<int> intArray = new MergeSort<int>();
+                            intArray.UserInputIntArray<int>();
+                        }
+                        else
+                        {
+                            MergeSort<string> strArray = new MergeSort<string>();
                             strArray.UserInputStringArray<string>();
                         }
 
